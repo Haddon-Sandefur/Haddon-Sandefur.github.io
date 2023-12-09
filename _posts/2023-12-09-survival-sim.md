@@ -4,6 +4,7 @@ date: 2023-12-09
 categories: [R, Censoring, Survival-Analysis]
 tags: [R, Survival-Analysis]
 toc: true
+math: true
 ---
 
 <head>
