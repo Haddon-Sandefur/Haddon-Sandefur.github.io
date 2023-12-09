@@ -352,7 +352,7 @@ Each MLE corresponds to a sample of n = 400
   facet_wrap(~name)
 ```
 
-![Image](/assets/images/censor_dists.png)
+![Image](https://garbage-time.github.io/assets/images/censor_dists.png)
 
 Here we can see how heavier censoring impacts the estimate sampling distributions w.r.t right and current status censoring.
 
