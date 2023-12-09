@@ -6,7 +6,7 @@ tags: [R, Survival-Analysis]
 toc: true
 math: true
 image:
-  path: /assets/images/censor_dists.png
+  path: /assets/images/2023-12-09-survival-sim/thumbnail.png
 ---
 
 <head>
@@ -355,7 +355,7 @@ Each MLE corresponds to a sample of n = 400
   facet_wrap(~name)
 ```
 
-![Image](https://garbage-time.github.io/assets/images/censor_dists.png)
+![Image](https://garbage-time.github.io/assets/images/2023-12-09-survival-sim/censor_dists.png)
 
 Here we can see how heavier censoring impacts the estimate sampling distributions w.r.t right and current status censoring.
 
