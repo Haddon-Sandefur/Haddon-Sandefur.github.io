@@ -68,7 +68,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/images/icon.png
+avatar: 'https://garbage-time.github.io/assets/images/icon.png'
 
 # boolean type, the global switch for TOC in posts.
 toc: true
