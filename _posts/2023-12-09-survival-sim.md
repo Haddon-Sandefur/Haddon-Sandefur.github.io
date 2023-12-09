@@ -5,6 +5,8 @@ categories: [R, Censoring, Survival-Analysis]
 tags: [R, Survival-Analysis]
 toc: true
 math: true
+image:
+  path: https://garbage-time.github.io/assets/images/censor_dists.png
 ---
 
 <head>
