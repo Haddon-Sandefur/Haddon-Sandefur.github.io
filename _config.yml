@@ -16,7 +16,7 @@ timezone: America/New_York
 
 title: Trash Hub # the main title
 
-tagline: A place for all my trinkets # it will display as the sub-title
+tagline: A place for all my garbage # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
