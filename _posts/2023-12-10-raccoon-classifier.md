@@ -1,5 +1,5 @@
 ---
-title: College Football ML App
+title: Raccoon Classifier
 date: 2023-12-10
 categories: [Python, Streamlit, Neural-Networks, Raccoons]
 tags: [python, neural-networks]
