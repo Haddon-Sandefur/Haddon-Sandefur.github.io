@@ -26,6 +26,9 @@ There's never been a need to in my line of work, nor in my hobby data projects. 
 
 Why raccoons? Because they're cool little fellas and my favorite animal :tm: (as you can probably ascertain from the theming on this website).
 
+![raccoon](/assets/images/2023-12-12-raccoon-classifier/istockphoto-1216661106-612x612.jpg)
+
+
 # The Code
 
 Before getting started, please shove this at the top of your script/notebook and ensure you have these packages installed:
