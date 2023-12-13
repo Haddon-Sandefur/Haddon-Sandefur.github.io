@@ -84,8 +84,8 @@ train_ds = tf.keras.utils.image_dataset_from_directory(
   image_size=(img_height, img_width)
   )
 
-  # Testing set:
-  val_ds = tf.keras.utils.image_dataset_from_directory(
+# Testing set:
+val_ds = tf.keras.utils.image_dataset_from_directory(
   data_dir,
   validation_split=0.2,
   subset="validation",
@@ -152,8 +152,8 @@ So, things to go over here: what are each of the methos being called doing?
 * `RandomFlip` does exactly what it sounds like, it's randomly flipping our images horizontally. This is a measure to help prevent overfitting.
 * `RandomRotation` same logic as above, but with a rotation transformation.
 * `RandomZoom`... you get the idea.
-* `Rescaling` normalizes the data by dividing by the maximum value that a color channel's 'intensity', or brightness takes on. This is, for reasons I don't entirely understand, helpful.
-* `Conv2D`: This sets the number of neurons/nodes in your NN. The number of neurons are determined by the number of filters you place onto the image (in the first call of this method, 16). Filters are effectively windows capturing a portion of your image, set to a given kernal size (in this case, a 3x3 matrix, or 'window') which convolutes across your image to create a feature map.
+* `Rescaling` normalizes the data by dividing by the maximum value that a color channel's 'intensity', or brightness takes on.
+* `Conv2D`: This sets the number of neurons/nodes in your NN's convolutional layers. The number of neurons are determined by the number of filters you place onto the image (in the first call of this method, 16). Filters are effectively windows capturing a portion of your image, set to a given kernal size (in this case, a 3x3 matrix, or 'window') which convolutes across your image to create a feature map.
 * `MaxPooling`: This downsamples the spatial dimension of the feature map by selecting the maximum value within your kernel window.
 * `Dropout`: Will randomly drop input data from training to prevent overfitting.
 * `Flatten`: Flattens the input data into a one-dimensional array.
@@ -194,5 +194,9 @@ with open('raccoon.tflite', 'wb') as f:
 
 After running the NN through 15 epochs, we've achieve about a 60% test set accuracy marginally. My next posts on this subject might be about improving this model through tuning techniques or feature engineering.
 
+# Resources/References:
+
+* Tensorflow Image Classifier tutorial: https://www.tensorflow.org/tutorials/images/classification
+* Helpful Medium Article for intuition: https://towardsdatascience.com/each-convolution-kernel-is-a-classifier-5c2da17ccf6e
 
 
