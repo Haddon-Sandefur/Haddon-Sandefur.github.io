@@ -5,6 +5,8 @@ categories: [Python, Streamlit, Neural-Networks, Raccoons]
 tags: [python, neural-networks]
 toc: true
 math: true
+image:
+  path: /assets/images/2023-12-12-raccoon-classifier/mouth.jpg
 ---
 
 # App
@@ -21,7 +23,7 @@ So, fun fact about me, I have never deployed a Neural Network (NN) before.
 
 There's never been a need to in my line of work, nor in my hobby data projects. The data I work with is overwhelmingly in tabular format, thus tree-based methods or linear models are almost always preferred. They're 'simpler', faster, and the performance differences are negligible to the point at which I don't bother to learn one of `Tensorflow` or `Pytorch`. Further, I really don't enjoy fitting something I don't understand, and NNs are very complicated. Despite still not understanding the finer details of NNs, I've finally fit one... to classify pictures of raccoons.
 
-![image](https://garbage-time.github.io/assets/images/2023-12-12-raccoon-classifier/istockphoto-1216661106-612x612.jpg)
+
 
 Why raccoons? Because they're cool little fellas and my favorite animal :tm: (as you can probably ascertain from the theming on this website).
 
@@ -181,6 +183,5 @@ with open('raccoon.tflite', 'wb') as f:
 
 After running the NN through 15 epochs, we've achieve about a 60% test set accuracy marginally. My next posts on this subject might be about improving this model through tuning techniques or feature engineering.
 
-![plot](https://garbage-time.github.io/assets/images/2023-12-12-raccoon-classifier/output.png)
 
 
