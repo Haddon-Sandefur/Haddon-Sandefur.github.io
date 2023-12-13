@@ -25,7 +25,7 @@ There's never been a need to in my line of work, nor in my hobby data projects. 
 
 
 
-Why raccoons? Because they're cool little fellas and my favorite animal :tm: (as you can probably ascertain from the theming on this website).
+Why raccoons? Because they're cool little fellas and my favorite animal, as you can probably ascertain from the theming on this website.
 
 ![raccoon](/assets/images/2023-12-12-raccoon-classifier/istockphoto-1216661106-612x612.jpg)
 
@@ -93,6 +93,12 @@ train_ds = tf.keras.utils.image_dataset_from_directory(
   image_size=(img_height, img_width)
   )
 ```
+Here, `dir_name` will be your path to the `images` folder from the text example. You may set that directory using:
+
+```python
+data_dir = pathlib.Path(os.getcwd() + '//images').with_suffix('')
+```
+
 If you want to ensure that the code did its job properly and identified the appropriate folders, you may print the class names the model will be trained for:
 
 ```python
