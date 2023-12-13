@@ -5,8 +5,7 @@ categories: [Python, Streamlit, Neural-Networks, Raccoons]
 tags: [python, neural-networks]
 toc: true
 math: true
-image:
-  path: /assets/images/2023-12-12-raccoon-classifier/mouth.jpg
+
 ---
 
 # App
