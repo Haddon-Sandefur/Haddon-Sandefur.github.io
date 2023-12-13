@@ -184,7 +184,7 @@ with open('raccoon.tflite', 'wb') as f:
 
 # Results.
 
-![plot](/assets/images/2023-12-12-raccoon-classifier/output.png)
+![plotoutput](/assets/images/2023-12-12-raccoon-classifier/output.png)
 
 After running the NN through 15 epochs, we've achieve about a 60% test set accuracy marginally. My next posts on this subject might be about improving this model through tuning techniques or feature engineering.
 
