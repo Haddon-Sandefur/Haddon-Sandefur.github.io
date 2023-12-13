@@ -47,7 +47,7 @@ from tensorflow.keras import layers, models
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 ```
 
-Anyway, this process is a near copy-paste walkthrough from `Tensorflow`'s image classification tutorial found [here](https://www.tensorflow.org/tutorials/images/classification). The only things which I altered were the training and testing data to accommodate my goal of classifying raccoons rather than flowers. I would argue that the data procurement step is the most tedious/challenging part of this exercise. Fortunately, once data is secured, the process for ingestion is quired straightforward thanks to `keras`. We'll want to set up folders somewhere on our computer containing the images for training, with each folder being named to the class of the images contained inside. For example, my folder looked like this:
+Anyway, this process is a near copy-paste walkthrough from `Tensorflow`'s image classification tutorial found [here](https://www.tensorflow.org/tutorials/images/classification). The only things which I altered were the training and testing data to accommodate my goal of classifying raccoons rather than flowers. I would argue that the data procurement step is the most tedious/challenging part of this exercise. Fortunately, once data is secured, the process for ingestion is quite straightforward thanks to `keras`. We'll want to set up folders somewhere on our computer containing the images for training, with each folder being named to the class of images contained inside. For example, my folder looked like this:
 
 ```text
 images/
@@ -65,8 +65,6 @@ images/
 ......tiger_1.jpg
 ......car_1.jpg
 ```
-
-
 
 Thankfully, `keras` can magically take this directory and split them into train/test sets for us by using the following code:
 
