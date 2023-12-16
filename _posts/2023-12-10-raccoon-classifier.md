@@ -190,7 +190,7 @@ with open('raccoon.tflite', 'wb') as f:
 
 ![plotoutput](/assets/images/2023-12-12-raccoon-classifier/output.png)
 
-After running the NN through 15 epochs, we've achieve about a 60% test set accuracy marginally. My next posts on this subject might be about improving this model through tuning techniques or feature engineering.
+After running the NN through 15 epochs, we've achieve about a 60% test set accuracy marginally. However, it would seem that the model has learned to over-rely on classifying unkown images as dogs. This is likely due to the quality and sample dize differences between the pictures of dogs I had, and the pictures of everything else. One potential solution would be to blur images prior to training, which will be investigated on the next post!
 
 # Resources/References:
 
