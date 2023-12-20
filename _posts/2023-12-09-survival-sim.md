@@ -68,6 +68,15 @@ CP=0.1 (light censoring); CP=0.5 (moderate censoring); CP=0.9 (heavy censoring) 
 
 ## Solution
 
+We'll code up the simulation in R. First, please run this to ensure `tidyverse` is installed.
+
+```r
+if(!require(tidyverse)){
+  install.packages("tidyverse")
+}
+```
+Next we'll need to define some expressions...
+
 This following chunk contains expressions of the log-likelihood, score, first derivative of the score, and sample size from an exponential density (The density of Event Time X) with a censoring indicator factored into the likelihood.
 ```r
 #Math to Code Expression for this Particular Likelihood:
