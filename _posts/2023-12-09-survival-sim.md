@@ -60,7 +60,7 @@ Use this informtion in tandem with the below instructions to observe estimation 
 
 You are required to conduct this experiment with each of the three censoring parameters:
 
-CP=0.1 (light censoring); CP=0.5 (moderate censoring); CP=0.9 (heavy censoring) and with three different sample sizes: n=100, 200, 400.
+$CP=0.1$ (light censoring); $CP=0.5$ (moderate censoring); $CP=0.9$ (heavy censoring) and with three different sample sizes: $n=100$, $200$, $400$.
 
 *Note that $\mu$ chosen for the different censoring probabilities correspond to a previous problem out of the scope of this webpage.*
 * Values are supplied in the code in the _Answers_ section.
@@ -71,9 +71,9 @@ I previously left this section out, but thought it would be important to express
 
 Censoring is the masking of time $t$ when a particular observation $i$ is said to experience the event. Unfortunately, when censoring occurs, it can _bias_ our estimates of parameters, subsequently effecting our research. Generally, there are three major types: Left Censoring, Right Censoring, and Interval Censoring. This post will focus on Right Censoring (the most common censoring in Survival Analysis) and Interval Censoring. Here's a simple example for each:
 
-* Right Censoring: You're conducting a clinical trial to see if Drug X postpones relapse of a particular medical event. The study ends before the event occurs in some study participants. Such participants' relapse event times are _right censored_.
+* **Right Censoring**: You're conducting a clinical trial to see if Drug X postpones relapse of a particular medical event. The study ends before the event occurs in some study participants. Such participants' relapse event times are _right censored_.
 
-* Current Status Interval Censoring: You're conducting a clinical trial to see if Drug Y postpones the relapse of prostate cancer in mice. You perform a biopsy on a mouse at time _t_ to discover it has developed prostate cancer. However, you do not know _exactly when this development occurred_, thus the event time _t_ is censored within a time interval.
+* **Current Status Interval Censoring**: You're conducting a clinical trial to see if Drug Y postpones the relapse of prostate cancer in mice. You perform a biopsy on a mouse at time _t_ to discover it has developed prostate cancer. However, you do not know _exactly when this development occurred_, thus the event time _t_ is censored within a time interval.
 
 So, to condense this information, right censored data is censored if the event time is not observed, and all current status data is censored. Hence, when we say $Z_i=Y_i$ for current status data, that's because it's always censored.
 
