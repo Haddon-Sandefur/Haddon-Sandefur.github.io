@@ -67,7 +67,7 @@ CP=0.1 (light censoring); CP=0.5 (moderate censoring); CP=0.9 (heavy censoring) 
 
 ## More Background:
 
-I previously left this section out, but thought it would be important to express the _why_ of doing something like this. In clinical trials, hardware failure studies, and any general "time till something happens" study, there exists a phenomenon called "censoring". 
+I previously left this section out, but thought it would be important to express the _why_ of doing something like this, as well as explain where some of the expressions come from in the code in later sections. In clinical trials, hardware failure studies, and any general "time till something happens" study, there exists a phenomenon called "censoring". 
 
 Censoring is the masking of time _t_ when a particular observation _i_ is said to experience the event. Unfortunately, when censoring occurs, it can _bias_ our estimates within data, subsequently effecting our research. Generally, there are three major types: Left Censoring, Right Censoring, and Interval Censoring. This post will focus on Right Censoring (the most common censoring in Survival Analysis) and Interval Censoring. Here's a simple example for each:
 
@@ -76,6 +76,8 @@ Censoring is the masking of time _t_ when a particular observation _i_ is said t
 * Current Status Interval Censoring: You're conducting a clinical trial to see if Drug Y postpones the relapse of prostate cancer in mice. You perform a biopsy on a mouse at time _t_ to discover it has developed prostate cancer. However, you do not know _exactly when this development occurred_, thus the event time _t_ is censored within a time interval.
 
 So, to condense this information, right censored data is censored if the event time is not observed, and all current status data is censored. Hence, when we say $Z_i=Y_i$ for current status data, that's because it's always censored.
+
+Now, let's see how we derive the expressions for the Newton-Raphson algorithm and the MLE for right-censored data.
 
 ### Likelihood for interval censoring data
 
@@ -92,7 +94,7 @@ $$\prod^{n} [e^{-(1-\Delta_i)\lambda z_i}(1-e^{-\lambda z_i})^{\Delta_i}]$$
 
 Doing some simplification and taking the log of this likelihood, we arrive at:
 
-$$l(\lambda;\bold{z}) = -\lambda\sum^{n}z_i \space + \space \sum^{n}\Delta_{i}log(e^{\lambda z_{i}-1})$$
+$$l(\lambda;\vec{z}) = -\lambda\sum^{n}z_i \space + \space \sum^{n}\Delta_{i}log(e^{\lambda z_{i}-1})$$
 
 From this expression, we can take the first derivative with respect to lambda to obtain the score (gradient). In the code below, we supply the score and its derivative in the Newton-Raphson Algorithm.
 
@@ -108,7 +110,7 @@ $$\prod^{n}[\lambda^{\Delta_i} e^{-\Delta_{i} \lambda z_{i}}e^{-(1-\Delta_{i}) \
 
 Now, take the log of this expression and optimize, yielding:
 
-$$\frac{\partial}{\partial \lambda}l(\lambda; \bold{z}) = \frac{\sum^{n}\Delta_{i}}{\lambda}-\sum^{n}z_i$$
+$$\frac{\partial}{\partial \lambda}l(\lambda; \vec{z}) = \frac{\sum^{n}\Delta_{i}}{\lambda}-\sum^{n}z_i$$
 
 Which leads to the MLE of:
 
