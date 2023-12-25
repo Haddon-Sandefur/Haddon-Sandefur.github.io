@@ -130,7 +130,7 @@ if(!require(tidyverse)){
 
 Next we'll need to define some expressions...
 
-This following chunk contains expressions of the log-likelihood, score, first derivative of the score, and sample size from an exponential density (The density of Event Time Z) with a censoring indicator factored into the likelihood.
+This following chunk contains expressions of the log-likelihood, score, first derivative of the score, and sample size from an exponential density (The density of Censoring Time Z) with a censoring indicator factored into the likelihood.
 
 ```r
 #Math to Code Expression for this Particular Likelihood:
@@ -420,5 +420,9 @@ Each MLE corresponds to a sample of n = 400
 
 ![Image](https://garbage-time.github.io/assets/images/2023-12-09-survival-sim/censor_dists.png)
 
-Here we can see how heavier censoring impacts the estimate sampling distributions w.r.t right and current status censoring.
+Here we can see how heavier censoring impacts the estimate sampling distributions w.r.t right and current status censoring:
+
+* Right Censoring: Clearly heavier censoring hampers the precision of our sampling distribution.
+
+* Current Status Censoring: This one is a bit trickier. It would seem that we would want the right censoring and left censoring to occur at approximately equal rates to gain the greatest precision in our sampling distribution, based on the results. Perhaps this mix garners the greatest amount of information.
 
