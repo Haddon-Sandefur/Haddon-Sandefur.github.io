@@ -71,7 +71,7 @@ I previously left this section out, but thought it would be important to express
 
 Censoring is the masking of time $t$ when a particular observation $i$ is said to experience the event. Unfortunately, when censoring occurs, it can _bias_ our estimates of parameters, subsequently effecting our research. Generally, there are three major types: Left Censoring, Right Censoring, and Interval Censoring. This post will focus on Right Censoring (the most common censoring in Survival Analysis) and Interval Censoring. Here's a simple example for each:
 
-* Right Censoring: You're conducting a clinical trial to see if Drug X postpones relapse of a particular medical event. The study ends before the event occurs in some study participants.
+* Right Censoring: You're conducting a clinical trial to see if Drug X postpones relapse of a particular medical event. The study ends before the event occurs in some study participants. Such participants' relapse event times are _right censored_.
 
 * Current Status Interval Censoring: You're conducting a clinical trial to see if Drug Y postpones the relapse of prostate cancer in mice. You perform a biopsy on a mouse at time _t_ to discover it has developed prostate cancer. However, you do not know _exactly when this development occurred_, thus the event time _t_ is censored within a time interval.
 
