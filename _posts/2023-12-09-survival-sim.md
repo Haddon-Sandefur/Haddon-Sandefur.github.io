@@ -69,7 +69,7 @@ CP=0.1 (light censoring); CP=0.5 (moderate censoring); CP=0.9 (heavy censoring) 
 
 I previously left this section out, but thought it would be important to express the _why_ of doing something like this, as well as explain where some of the expressions come from in the code in later sections. In clinical trials, hardware failure studies, and any general "time till something happens" study, there exists a phenomenon called "censoring". 
 
-Censoring is the masking of time _t_ when a particular observation _i_ is said to experience the event. Unfortunately, when censoring occurs, it can _bias_ our estimates within data, subsequently effecting our research. Generally, there are three major types: Left Censoring, Right Censoring, and Interval Censoring. This post will focus on Right Censoring (the most common censoring in Survival Analysis) and Interval Censoring. Here's a simple example for each:
+Censoring is the masking of time $t$ when a particular observation $i$ is said to experience the event. Unfortunately, when censoring occurs, it can _bias_ our estimates of parameters, subsequently effecting our research. Generally, there are three major types: Left Censoring, Right Censoring, and Interval Censoring. This post will focus on Right Censoring (the most common censoring in Survival Analysis) and Interval Censoring. Here's a simple example for each:
 
 * Right Censoring: You're conducting a clinical trial to see if Drug X postpones relapse of a particular medical event. The study ends before the event occurs in some study participants.
 
@@ -86,7 +86,7 @@ Shortly, we'll use the Newton Raphson algorithm to estimate a maximum likelihood
 
 $$\prod_{i\in R}^{n}S(z_{i})\prod_{i\in L}^{n}1-S(z_{i})$$
 
-Where $S(z)$ is the survival function, which equivalent to 1 minus the CDF of $z$.
+Where $S(z)$ is the survival function, which equivalent to 1 minus the CDF of $z$. The right censoring survival function is on the left-hand side of the expression.
 
 Given this information, we can rewrite our likelihood as:
 
@@ -104,7 +104,7 @@ Fortunately, this one is much more straight forward and we can more easily deriv
 
 $$\prod_{i\in E}^{n}f(z_{_i})\prod_{i\in R}^{n}S(z_{i})$$
 
-Rewritten:
+Where $i \in E$ means that the particular _event_ was observed, or _not censored_. We can write in our particular density and survival functions with:
 
 $$\prod^{n}[\lambda^{\Delta_i} e^{-\Delta_{i} \lambda z_{i}}e^{-(1-\Delta_{i}) \lambda z_{i}}] = \prod^{n}\lambda^{\Delta_i} e^{-\lambda z_{i}}$$
 
@@ -131,6 +131,7 @@ if(!require(tidyverse)){
 Next we'll need to define some expressions...
 
 This following chunk contains expressions of the log-likelihood, score, first derivative of the score, and sample size from an exponential density (The density of Event Time X) with a censoring indicator factored into the likelihood.
+
 ```r
 #Math to Code Expression for this Particular Likelihood:
 f.exp_int <- function(z, Status, lambda){
