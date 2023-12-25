@@ -130,7 +130,7 @@ if(!require(tidyverse)){
 
 Next we'll need to define some expressions...
 
-This following chunk contains expressions of the log-likelihood, score, first derivative of the score, and sample size from an exponential density (The density of Event Time X) with a censoring indicator factored into the likelihood.
+This following chunk contains expressions of the log-likelihood, score, first derivative of the score, and sample size from an exponential density (The density of Event Time Z) with a censoring indicator factored into the likelihood.
 
 ```r
 #Math to Code Expression for this Particular Likelihood:
