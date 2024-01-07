@@ -114,7 +114,15 @@ $$\frac{\partial}{\partial \lambda}l(\lambda; \vec{z}) = \frac{\sum^{n}\Delta_{i
 
 Which leads to the MLE of:
 
-$$\widehat{\lambda} = \frac{\bar{\Delta}}{\bar{z}}$$
+$$
+\begin{align*}
+\widehat{\lambda} &= \frac{\sum^{n}\Delta_{i}}{\sum^{n}z_i} \\
+& \\
+&= \frac{\sum^{n}\Delta_{i}}{n}/\frac{\sum^{n}z_i}{n} \\
+& \\
+&= \frac{\bar{\Delta}}{\bar{z}}
+\end{align*}
+$$
 
 This is the 'theoretical expression' mentioned in later sections, since the Newton-Rhapson algorithm is not used for the right-censored MLE.
 
