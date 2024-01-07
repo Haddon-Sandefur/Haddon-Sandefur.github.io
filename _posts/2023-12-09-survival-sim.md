@@ -110,7 +110,13 @@ $$\prod^{n}[\lambda^{\Delta_i} e^{-\Delta_{i} \lambda z_{i}}e^{-(1-\Delta_{i}) \
 
 Now, take the log of this expression and optimize, yielding:
 
-$$\frac{\partial}{\partial \lambda}l(\lambda; \vec{z}) = \frac{\sum^{n}\Delta_{i}}{\lambda}-\sum^{n}z_i$$
+$$
+\begin{align*}
+\frac{\partial}{\partial \lambda}l(\lambda; \vec{z}) &= \frac{\sum^{n}\Delta_{i}}{\lambda}-\sum^{n}z_i \\
+& \\
+&= \frac{\sum^{n}\Delta_{i}}{n*\lambda}-\frac{\sum^{n}z_i}{n}
+\end{align*}
+$$
 
 Which leads to the MLE of:
 
