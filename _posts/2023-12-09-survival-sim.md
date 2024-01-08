@@ -1,6 +1,6 @@
 ---
 title: Survival Analysis Simulation
-date: 2024-01-07
+date: 2023-12-09
 categories: [R, Censoring, Survival-Analysis]
 tags: [r, survival-analysis]
 toc: true
