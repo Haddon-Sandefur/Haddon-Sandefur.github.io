@@ -12,7 +12,7 @@ image:
 # App
 
 <iframe
-  src="https://raccoonclassifier1.streamlit.app/?embed=true"
+  src="https://raccoonclassifier.streamlit.app/?embed=true"
   height="450"
   style="width:100%;border:none;"
 ></iframe>
